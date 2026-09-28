@@ -3,8 +3,9 @@
   "order": 70,
   "category": "comics",
   "type": "Comic",
-  "description": "Short comic story.",
-  "hidden": false,
+  "client": "",
+  "year": "",
+  "description": "First Graphic Novel published.",
   "images": [
     "/uploads/la-creatura-perfetta-01.webp",
     "/uploads/la-creatura-perfetta-02.webp",
@@ -13,5 +14,6 @@
     "/uploads/la-creatura-perfetta-05.webp",
     "/uploads/la-creatura-perfetta-06.webp",
     "/uploads/la-creatura-perfetta-07.webp"
-  ]
+  ],
+  "hidden": false
 }
