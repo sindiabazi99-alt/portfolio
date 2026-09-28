@@ -1,0 +1,21 @@
+{
+  "title": "Aztec:Tec World",
+  "order": 120,
+  "category": "concept",
+  "type": "Game Concept — Personal",
+  "description": "Characters and world-building for an original game.",
+  "hidden": false,
+  "images": [
+    "/uploads/aztec-tec-world-01.webp",
+    "/uploads/aztec-tec-world-02.webp",
+    "/uploads/aztec-tec-world-03.webp",
+    "/uploads/aztec-tec-world-04.webp",
+    "/uploads/aztec-tec-world-05.webp",
+    "/uploads/aztec-tec-world-06.webp",
+    "/uploads/aztec-tec-world-07.webp",
+    "/uploads/aztec-tec-world-08.webp",
+    "/uploads/aztec-tec-world-09.webp",
+    "/uploads/aztec-tec-world-10.webp",
+    "/uploads/aztec-tec-world-11.webp"
+  ]
+}

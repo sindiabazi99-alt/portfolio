@@ -1,0 +1,16 @@
+{
+  "title": "No Regular Music",
+  "order": 20,
+  "category": "covers",
+  "type": "Album Cover",
+  "description": "Concept, sketches and lineups for the NRM album cover.",
+  "hidden": false,
+  "images": [
+    "/uploads/no-regular-music-01.webp",
+    "/uploads/no-regular-music-02.webp",
+    "/uploads/no-regular-music-03.webp",
+    "/uploads/no-regular-music-04.webp",
+    "/uploads/no-regular-music-05.webp",
+    "/uploads/no-regular-music-06.webp"
+  ]
+}

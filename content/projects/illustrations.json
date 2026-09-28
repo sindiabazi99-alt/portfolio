@@ -1,0 +1,19 @@
+{
+  "title": "Illustrations",
+  "order": 130,
+  "category": "illustration",
+  "type": "Illustration",
+  "description": "Selected character illustrations.",
+  "hidden": false,
+  "images": [
+    "/uploads/illustrations-01.webp",
+    "/uploads/illustrations-02.webp",
+    "/uploads/illustrations-03.webp",
+    "/uploads/illustrations-04.webp",
+    "/uploads/illustrations-05.webp",
+    "/uploads/illustrations-06.webp",
+    "/uploads/illustrations-07.webp",
+    "/uploads/illustrations-08.webp",
+    "/uploads/illustrations-09.webp"
+  ]
+}

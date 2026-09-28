@@ -1,0 +1,13 @@
+{
+  "title": "Malinche",
+  "order": 80,
+  "category": "comics",
+  "type": "Comic — Unreleased",
+  "description": "Graphic novel in progress. Not published yet.",
+  "hidden": false,
+  "images": [
+    "/uploads/malinche-01.webp",
+    "/uploads/malinche-02.webp",
+    "/uploads/malinche-03.webp"
+  ]
+}

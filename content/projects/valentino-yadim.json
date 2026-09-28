@@ -1,0 +1,28 @@
+{
+  "title": "Valentino × Yadim",
+  "order": 50,
+  "category": "storyboards",
+  "type": "Storyboard",
+  "client": "Goofy Studio",
+  "description": "Storyboard for Valentino with Yadim.",
+  "hidden": false,
+  "images": [
+    "/uploads/valentino-yadim-01.webp",
+    "/uploads/valentino-yadim-02.webp",
+    "/uploads/valentino-yadim-03.webp",
+    "/uploads/valentino-yadim-04.webp",
+    "/uploads/valentino-yadim-05.webp",
+    "/uploads/valentino-yadim-06.webp",
+    "/uploads/valentino-yadim-07.webp",
+    "/uploads/valentino-yadim-08.webp",
+    "/uploads/valentino-yadim-09.webp",
+    "/uploads/valentino-yadim-10.webp",
+    "/uploads/valentino-yadim-11.webp",
+    "/uploads/valentino-yadim-12.webp",
+    "/uploads/valentino-yadim-13.webp",
+    "/uploads/valentino-yadim-14.webp",
+    "/uploads/valentino-yadim-15.webp",
+    "/uploads/valentino-yadim-16.webp",
+    "/uploads/valentino-yadim-17.webp"
+  ]
+}

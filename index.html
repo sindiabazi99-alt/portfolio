@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Sindi Abazi — Comic Artist &amp; Concept Artist</title>
-    <meta name="description" content="Sindi Abazi — Italian comic artist and concept artist. Comics, storyboards, cover art, concept art and illustration." />
+    <title>%SEO_TITLE%</title>
+    <meta name="description" content="%SEO_DESCRIPTION%" />
     <meta name="theme-color" content="#f1f1ef" />
-    <meta property="og:title" content="Sindi Abazi — Comic Artist &amp; Concept Artist" />
-    <meta property="og:description" content="Comic &amp; Concept artist. Comics, storyboards, cover art, concept art and illustration." />
+    <meta property="og:title" content="%SEO_TITLE%" />
+    <meta property="og:description" content="%SEO_DESCRIPTION%" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://sindi-abazi.vercel.app/" />
-    <meta property="og:image" content="https://sindi-abazi.vercel.app/og-sindi.jpg" />
+    <meta property="og:image" content="%SHARE_IMAGE%" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -21,20 +21,20 @@
   </head>
   <body>
     <div id="loader" aria-hidden="true">
-      <div class="loader-mark">SINDI ABAZI</div>
+      <div class="loader-mark">%NAME%</div>
       <div class="loader-count"><span id="loader-num">000</span></div>
     </div>
 
     <main id="stage" aria-label="Works">
       <div id="world">
-        <div id="label"><span id="label-text">SINDI ABAZI</span><sup id="label-count"></sup></div>
+        <div id="label"><span id="label-text">%NAME%</span><sup id="label-count"></sup></div>
       </div>
     </main>
 
     <header class="top">
       <div class="id">
-        <a class="brand" href="#/" aria-label="SINDI ABAZI — home">SINDI ABAZI</a>
-        <p class="tag">Comic &amp; Concept artist</p>
+        <a class="brand" href="#/" aria-label="%NAME% — home">%NAME%</a>
+        <p class="tag">%TAGLINE%</p>
       </div>
       <nav class="cats" id="cats" aria-label="Categories"></nav>
       <button class="link info-btn" id="info-btn">Info</button>
@@ -47,7 +47,7 @@
         <button data-mode="index" role="tab">Index</button>
       </div>
       <div class="status" id="status">Drag to rotate</div>
-      <div class="copy">©&nbsp;<span id="year"></span>&nbsp;SINDI ABAZI</div>
+      <div class="copy">©&nbsp;<span id="year"></span>&nbsp;%NAME%</div>
     </footer>
 
     <section id="index" aria-label="Project index"><ol id="index-list"></ol></section>
@@ -60,31 +60,15 @@
     <section id="info" aria-hidden="true">
       <button class="link close" data-close>Close</button>
       <div class="info-inner">
-        <p class="info-lead">
-          Sindi Abazi is an Italian comic artist and concept artist, drawing comics, storyboards, cover art and
-          characters for fashion films, music, kids' series and original worlds.
-        </p>
+        <p class="info-lead">%BIO%</p>
         <div class="info-cols">
           <div>
             <h3>Worked on</h3>
-            <ul>
-              <li>Gucci — for Goofy Studio</li>
-              <li>Valentino × Yadim — for Goofy Studio</li>
-              <li>Luchè</li>
-              <li>Juice WRLD</li>
-              <li>No Regular Music</li>
-              <li>Aprendemos Juntos Kids</li>
-            </ul>
+            <ul id="clients"></ul>
           </div>
           <div>
             <h3>Disciplines</h3>
-            <ul>
-              <li>Storyboards</li>
-              <li>Comics &amp; graphic novels</li>
-              <li>Cover art</li>
-              <li>Character &amp; concept art</li>
-              <li>Illustration</li>
-            </ul>
+            <ul id="disciplines"></ul>
           </div>
           <div>
             <h3>Contact</h3>

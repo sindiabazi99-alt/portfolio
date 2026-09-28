@@ -3,3 +3,6 @@ dist
 .vercel
 .env*
 .DS_Store
+public/_gen
+src/content.gen.js
+.claude

@@ -1,14 +1,18 @@
 import "./style.css";
-import { PROJECTS } from "./data.js";
+import { PROJECTS, SETTINGS } from "./content.gen.js";
 
 // ---------------------------------------------------------------- config
+// testi e contatti arrivano dal CMS (content/settings.json)
+const esc = (v = "") =>
+  String(v).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+const IG = (SETTINGS.instagram || "").replace(/^@/, "").replace(/^https?:\/\/(www\.)?instagram\.com\//, "").replace(/\/$/, "");
 const CONTACT = [
-  { label: "Email", href: "mailto:sindiabazi99@gmail.com", text: "sindiabazi99@gmail.com" },
-  { label: "Instagram", href: "https://www.instagram.com/sindiabazi_art/", text: "@sindiabazi_art" },
-];
+  SETTINGS.email && { href: `mailto:${SETTINGS.email}`, text: SETTINGS.email },
+  IG && { href: `https://www.instagram.com/${IG}/`, text: `@${IG}` },
+].filter(Boolean);
 
 const CATS = [
-  { id: "all", label: "All Work", center: "SINDI ABAZI" },
+  { id: "all", label: "All Work", center: SETTINGS.name },
   { id: "covers", label: "Covers" },
   { id: "storyboards", label: "Storyboards" },
   { id: "comics", label: "Comics" },
@@ -309,6 +313,7 @@ function setCat(cat) {
 const catsEl = $("#cats");
 CATS.forEach((c) => {
   const n = c.id === "all" ? items.length : items.filter((it) => it.p.cat === c.id).length;
+  if (!n) return;
   const b = document.createElement("button");
   b.dataset.cat = c.id;
   b.setAttribute("role", "tab");
@@ -320,10 +325,12 @@ $$("#views button").forEach((b) => b.addEventListener("click", () => setMode(b.d
 $("#year").textContent = new Date().getFullYear();
 
 const contactEl = $("#contact");
-contactEl.innerHTML = CONTACT.length
-  ? CONTACT.map((c) => `<li><a href="${c.href}" target="_blank" rel="noopener">${c.text}</a></li>`).join("")
-  : "";
-contactEl.insertAdjacentHTML("afterbegin", `<li>Open for commissions</li>`);
+contactEl.innerHTML =
+  (SETTINGS.availability ? `<li>${esc(SETTINGS.availability)}</li>` : "") +
+  CONTACT.map((c) => `<li><a href="${esc(c.href)}" target="_blank" rel="noopener">${esc(c.text)}</a></li>`).join("");
+const list = (el, arr) => ($(el).innerHTML = (arr || []).map((x) => `<li>${esc(x)}</li>`).join(""));
+list("#clients", SETTINGS.clients);
+list("#disciplines", SETTINGS.disciplines);
 
 // index
 const indexList = $("#index-list");
@@ -338,8 +345,8 @@ function renderIndex() {
       (p, i) => `<li><button data-slug="${p.slug}" style="--d:${i * 45}ms">
         <span class="n">${pad2(p.index + 1)}</span>
         <span class="c">${CAT_LABEL[p.cat]}</span>
-        <span class="t">${p.title}</span>
-        <span class="k">${p.kind}${p.client ? ` — ${p.client}` : ""}</span>
+        <span class="t">${esc(p.title)}</span>
+        <span class="k">${esc(p.kind)}${p.client ? ` — ${esc(p.client)}` : ""}</span>
         <span class="q">${pad2(p.images.length)}</span>
       </button></li>`
     )
@@ -373,7 +380,7 @@ const cur = { x: -100, y: -100, tx: -100, ty: -100, px: -100, py: -100 };
 function setHover(it) {
   S.hover = it;
   if (it) {
-    pill.innerHTML = `${it.p.title}<em>${it.p.kind}</em>`;
+    pill.innerHTML = `${esc(it.p.title)}<em>${esc(it.p.kind)}</em>`;
     cursor.classList.add("on");
     setStatus(`${pad2(it.p.index + 1)} — ${it.p.title} · ${pad2(it.ii + 1)}/${pad2(it.p.images.length)}`);
   } else {
@@ -477,26 +484,26 @@ function renderViewer(p, at = 0) {
     </div>
     <div class="v-body">
       <div class="v-meta v-reveal">
-        <h1 class="v-title">${p.title.split(" ").map((w) => `<span class="w">${w}</span>`).join(" ")}</h1>
+        <h1 class="v-title">${p.title.split(" ").map((w) => `<span class="w">${esc(w)}</span>`).join(" ")}</h1>
         <dl>
-          <dt>Type</dt><dd>${p.kind}</dd>
-          ${p.client ? `<dt>Client</dt><dd>${p.client.replace(/^for /, "")}</dd>` : ""}
-          ${p.year ? `<dt>Year</dt><dd>${p.year}</dd>` : ""}
+          ${p.kind ? `<dt>Type</dt><dd>${esc(p.kind)}</dd>` : ""}
+          ${p.client ? `<dt>Client</dt><dd>${esc(p.client)}</dd>` : ""}
+          ${p.year ? `<dt>Year</dt><dd>${esc(p.year)}</dd>` : ""}
           <dt>Images</dt><dd>${pad2(p.images.length)}</dd>
         </dl>
-        ${p.note ? `<p>${p.note}</p>` : ""}
+        ${p.note ? `<p>${esc(p.note)}</p>` : ""}
       </div>
       <div class="v-imgs v-reveal ${portrait ? "portrait" : ""}">
         ${p.images
           .map(
             (im, i) => `<figure style="aspect-ratio:${im.w}/${im.h}" data-i="${i}">
-              <img src="${im.src}" alt="${p.title} — ${i + 1}" loading="${i < 4 || i === at ? "eager" : "lazy"}" decoding="async" width="${im.w}" height="${im.h}">
+              <img src="${im.src}" alt="${esc(p.title)} — ${i + 1}" loading="${i < 4 || i === at ? "eager" : "lazy"}" decoding="async" width="${im.w}" height="${im.h}">
               <figcaption>${pad2(i + 1)}</figcaption></figure>`
           )
           .join("")}
       </div>
     </div>
-    <button class="v-next" data-next="${next.slug}"><span>Next project — ${pad2(next.index + 1)}</span><strong>${next.title}</strong></button>`;
+    <button class="v-next" data-next="${next.slug}"><span>Next project — ${pad2(next.index + 1)}</span><strong>${esc(next.title)}</strong></button>`;
   $$("img", viewer).forEach((img) => {
     if (img.complete) img.classList.add("loaded");
     else img.addEventListener("load", () => img.classList.add("loaded"), { once: true });

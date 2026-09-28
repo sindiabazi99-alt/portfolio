@@ -1,0 +1,16 @@
+{
+  "title": "Aprendemos Juntos Kids",
+  "order": 100,
+  "category": "comics",
+  "type": "Comic Series",
+  "description": "Comic pages for the Aprendemos Juntos Kids series.",
+  "hidden": false,
+  "images": [
+    "/uploads/aprendemos-juntos-comics-01.webp",
+    "/uploads/aprendemos-juntos-comics-02.webp",
+    "/uploads/aprendemos-juntos-comics-03.webp",
+    "/uploads/aprendemos-juntos-comics-04.webp",
+    "/uploads/aprendemos-juntos-comics-05.webp",
+    "/uploads/aprendemos-juntos-comics-06.webp"
+  ]
+}

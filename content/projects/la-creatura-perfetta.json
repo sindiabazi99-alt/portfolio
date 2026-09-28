@@ -1,0 +1,17 @@
+{
+  "title": "La Creatura Perfetta",
+  "order": 70,
+  "category": "comics",
+  "type": "Comic",
+  "description": "Short comic story.",
+  "hidden": false,
+  "images": [
+    "/uploads/la-creatura-perfetta-01.webp",
+    "/uploads/la-creatura-perfetta-02.webp",
+    "/uploads/la-creatura-perfetta-03.webp",
+    "/uploads/la-creatura-perfetta-04.webp",
+    "/uploads/la-creatura-perfetta-05.webp",
+    "/uploads/la-creatura-perfetta-06.webp",
+    "/uploads/la-creatura-perfetta-07.webp"
+  ]
+}

@@ -4,12 +4,15 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "images": "node scripts/build-images.mjs",
+    "content": "node scripts/build-content.mjs",
+    "predev": "node scripts/build-content.mjs",
     "dev": "vite",
+    "prebuild": "node scripts/build-content.mjs",
     "build": "vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "sharp": "^0.35.5",
     "vite": "^7.0.0"
   }
 }

@@ -1,0 +1,29 @@
+{
+  "title": "Aprendemos Juntos Kids",
+  "order": 110,
+  "category": "concept",
+  "type": "Series Concept Art",
+  "description": "Characters, props and environments for the animated series.",
+  "hidden": false,
+  "images": [
+    "/uploads/aprendemos-juntos-concept-01.webp",
+    "/uploads/aprendemos-juntos-concept-02.webp",
+    "/uploads/aprendemos-juntos-concept-03.webp",
+    "/uploads/aprendemos-juntos-concept-04.webp",
+    "/uploads/aprendemos-juntos-concept-05.webp",
+    "/uploads/aprendemos-juntos-concept-06.webp",
+    "/uploads/aprendemos-juntos-concept-07.webp",
+    "/uploads/aprendemos-juntos-concept-08.webp",
+    "/uploads/aprendemos-juntos-concept-09.webp",
+    "/uploads/aprendemos-juntos-concept-10.webp",
+    "/uploads/aprendemos-juntos-concept-11.webp",
+    "/uploads/aprendemos-juntos-concept-12.webp",
+    "/uploads/aprendemos-juntos-concept-13.webp",
+    "/uploads/aprendemos-juntos-concept-14.webp",
+    "/uploads/aprendemos-juntos-concept-15.webp",
+    "/uploads/aprendemos-juntos-concept-16.webp",
+    "/uploads/aprendemos-juntos-concept-17.webp",
+    "/uploads/aprendemos-juntos-concept-18.webp",
+    "/uploads/aprendemos-juntos-concept-19.webp"
+  ]
+}

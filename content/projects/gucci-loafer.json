@@ -1,0 +1,17 @@
+{
+  "title": "Gucci — Loafer",
+  "order": 30,
+  "category": "storyboards",
+  "type": "Storyboard",
+  "client": "Goofy Studio",
+  "description": "Scene-by-scene storyboard for the Gucci Loafer film.",
+  "hidden": false,
+  "images": [
+    "/uploads/gucci-loafer-01.webp",
+    "/uploads/gucci-loafer-02.webp",
+    "/uploads/gucci-loafer-03.webp",
+    "/uploads/gucci-loafer-04.webp",
+    "/uploads/gucci-loafer-05.webp",
+    "/uploads/gucci-loafer-06.webp"
+  ]
+}
