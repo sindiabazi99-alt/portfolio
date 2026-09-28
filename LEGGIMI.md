@@ -18,6 +18,11 @@ Vai su **https://sindi-abazi.vercel.app/admin/**
 
 (Il pulsante "Sign In with GitHub" non è configurato: usa sempre il token.)
 
+**Se dice "Non hai accesso al repository"** il token non ha il permesso di scrittura su `portfolio`:
+riapri il token su GitHub e controlla che *Repository access* sia **Only select repositories → portfolio**
+(non "Public repositories") e che *Contents* sia **Read and write**. Poi nel CMS esci e rientra.
+In alternativa usa un token *classic* (Personal access tokens → Tokens (classic)) con la spunta **repo**.
+
 ### Cosa puoi fare
 
 - **Progetti**: titolo, ordine, categoria, tipo (tag), cliente, anno, descrizione, immagini.
